@@ -237,6 +237,50 @@
               </div>
             </div>
           </div>
+          <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Entries Table</h4>
+                    <button class="btn btn-primary add-btn" data-bs-toggle="modal" data-bs-target="#addEntryModal">Add Entry</button>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Farm A</td>
+                            <td>Active</td>
+                            <td class="table-actions">
+                              <i class="mdi mdi-eye"></i>
+                              <i class="mdi mdi-pencil"></i>
+                              <i class="mdi mdi-delete"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Warehouse B</td>
+                            <td>Inactive</td>
+                            <td class="table-actions">
+                              <i class="mdi mdi-eye"></i>
+                              <i class="mdi mdi-pencil"></i>
+                              <i class="mdi mdi-delete"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a href="#">Agro Comapny</a>. All rights reserved.</span>
