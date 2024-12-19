@@ -56,6 +56,12 @@
                 header('Location: ../warehousemanagerdashboard.php');
             }
 
+            else if (strtolower($user_type) === 'grading unit manager') {
+                $_SESSION['userid'] = $userid;
+                $_SESSION['user_name'] = $user_name;
+                header('Location: ../gumdashboard.php');
+            }
+
         } else {
             echo "Login failed. Please check your username and password.";
         }

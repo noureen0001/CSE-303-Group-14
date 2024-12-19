@@ -16,12 +16,9 @@
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
-
     <link rel="stylesheet" href="assets/css/style.css">
-
     <link rel="shortcut icon" href="assets/images/favicon.png" />
   </head>
   <body>
@@ -78,8 +75,80 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
+              <a class="nav-link" href="#">
+                <span class="menu-title">Home</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="backend/grading_criteria.php">
+                <span class="menu-title">Grading Criteria</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="backend/quality_reports.php">
+                <span class="menu-title">Records and Quality Reports</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="adminpages/track_product.php">
+                <span class="menu-title">Track Graded Produce</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="adminpages/delivery_progress.php">
+                <span class="menu-title">Delivery Progress</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">Problem Areas</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-lock menu-icon"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_heavy_rainfall.php"> Heavy Rainfall </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_flooding.php"> Flooding </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_maintanance_problem.php"> Maintanace Problem </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_overdose_pesticide.php"> Overdose of Pesticide </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_insect_attack.php"> Insect Attack </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/problem_areas_drought.php"> Drought </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="adminpages/admin-add-user.php">
+                <span class="menu-title">Add Government Users</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="adminpages/admin-grade-supplier.php">
+                <span class="menu-title">Grade Suppliers</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
@@ -95,7 +164,7 @@
                     <a class="nav-link" href="entries/farmentries.html">Farm</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="entries/warehouseentry.html">Warehouse</a>
+                    <a class="nav-link" href="entries/warehouseentry.php">Warehouse</a>
                   </li>
                 </ul>
               </div>
@@ -141,29 +210,63 @@
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Dhaka </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-dhaka.php"> Dhaka </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Chittagong </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-chittagong.php"> Chittagong </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Rajshahi </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-rajshahi.php"> Rajshahi </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Khulna </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-khulna.php"> Khulna </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Barisal </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-barisal.php"> Barisal </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Sylhet </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-sylhet.php"> Sylhet </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> Rangpur </a>
+                    <a class="nav-link" href="adminpages/admin-warehouses-rangpur.php"> Rangpur </a>
                   </li>
                 </ul>
               </div>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">Farm List</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-lock menu-icon"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-dhaka.php"> Dhaka </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-chittagong.php"> Chittagong </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-rajshahi.php"> Rajshahi </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-khulna.php"> Khulna </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-barisal.php"> Barisal </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-sylhet.php"> Sylhet </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminpages/admin-farm-rangpur.php"> Rangpur </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="login.html">
                 <span class="menu-title">Sign Out</span>
@@ -237,50 +340,6 @@
               </div>
             </div>
           </div>
-          <div class="row">
-              <div class="col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Entries Table</h4>
-                    <button class="btn btn-primary add-btn" data-bs-toggle="modal" data-bs-target="#addEntryModal">Add Entry</button>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Farm A</td>
-                            <td>Active</td>
-                            <td class="table-actions">
-                              <i class="mdi mdi-eye"></i>
-                              <i class="mdi mdi-pencil"></i>
-                              <i class="mdi mdi-delete"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Warehouse B</td>
-                            <td>Inactive</td>
-                            <td class="table-actions">
-                              <i class="mdi mdi-eye"></i>
-                              <i class="mdi mdi-pencil"></i>
-                              <i class="mdi mdi-delete"></i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a href="#">Agro Comapny</a>. All rights reserved.</span>

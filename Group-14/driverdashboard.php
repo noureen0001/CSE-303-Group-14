@@ -86,15 +86,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
+              <a class="nav-link" href="#">
+                <span class="menu-title">Home</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="inputs/delivery info/index.html">
-                <span class="menu-title">Delivery Information</span>
+              <a class="nav-link" href="#">
+                <span class="menu-title">TBA</span>
               </a>
             </li>
 

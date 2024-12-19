@@ -76,7 +76,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../admin.php">
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Home</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
@@ -166,6 +166,7 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <form action="../backend/remove-farmer.php" method="POST">
                         <?php
 
                           $sql = "SELECT * FROM farmer_t";
@@ -191,18 +192,19 @@
                             echo "<td>" . $area_name . "</td>";
                             echo "<td>" . $district . "</td>";
 
-                            $farmname_sql = "SELECT FarmName FROM `farm_t` JOIN farmer_t ON farm_t.FarmerID = '$farmer_id'";
+                            $farmname_sql = "SELECT FarmName FROM farmer_t JOIN farm_t ON farmer_t.FarmerID = farm_t.FarmerID WHERE farm_t.FarmerID = '$farm_id'";
                             $res = $conn->query($farmname_sql);
 
                             while ($row2 = mysqli_fetch_array($res)) {
                               $farm_name = $row2['FarmName'];
-                              echo "<td>" . $farm_name . "<br>";
+                              echo "<td>" . $farm_name . "</td>";
                             }
-                            echo "</td>";
-                            // echo "<td>" . $farm_name . "</td>";
+                            echo "<td><button type='submit' name='remove_farmer' value='" . $farmer_id . "'>Remove</button></td></tr>";
+                            
                           }
                         
                         ?>
+                        </form>
                       </tbody>
                     </table>
                   </div>

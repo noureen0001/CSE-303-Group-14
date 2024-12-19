@@ -12,6 +12,7 @@
         $password = $_POST["password"];
         $area = $_POST["area"];
         $district = $_POST["district"];
+        $division = $_POST["division"];
         $user_type = $_POST["user_type"];
         $contact_number = $_POST["conatct_number"];
 
@@ -22,30 +23,51 @@
         $result = $conn->query($sql);
 
         if (strtolower($user_type) === "farmer") {
-            $sql = "INSERT INTO farmer_t(FarmerID, FName, LName, AreaName, District, ContactNumber) VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$contact_number')";
+            $sql1 = "INSERT INTO farmer_t(FarmerID, FName, LName, AreaName, District, Division, ContactNumber) VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$division' '$contact_number', 'NULL')";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($sql1) === TRUE) {
                 echo "Data updated successfully!";
                 header('Location: ../login.html');
+            }
+            else {
+                echo $conn->query($sql1);
             }
         } 
         
         else if (strtolower($user_type) === "driver") {
-            $sql = "INSERT INTO driver_t (DriverID, FName, LName, AreaName, District, ContactNumber) VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$contact_number')";
+            $sql1 = "INSERT INTO driver_t VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$division', '$contact_number', NULL, NULL)";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($sql1) === TRUE) {
                 echo "Data updated successfully!";
                 header('Location: ../login.html');
+            }
+            else {
+                echo $conn->query($sql1);
             }
         }
 
-        else if (strtolower($user_type) === "Warehouse Manager") {
-            $sql = "INSERT INTO driver_t (WHManagerID, FName, LName, AreaName, District, ContactNumber) VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$contact_number')";
+        else if (strtolower($user_type) === "warehouse manager") {
+            $sql1 = "INSERT INTO warehouse_manager_t VALUES('$userid', '$first_name', '$last_name', '$area', '$district', '$division', '$contact_number')";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($sql1) === TRUE) {
                 echo "Data updated successfully!";
                 header('Location: ../login.html');
             }
+            else {
+                echo $conn->query($sql1);
+            }
+        }
+
+        else if (strtolower($user_type) === "supplier") {
+                $sql1 = "INSERT INTO supplier_t VALUES('$userid', '$user_name', '$area', '$district', '$division', '$contact_number')";
+    
+                if ($conn->query($sql1) === TRUE) {
+                    echo "Data updated successfully!";
+                    header('Location: ../login.html');
+                }
+                else {
+                    echo $conn->query($sql1);
+                }
         }
     }
 ?>

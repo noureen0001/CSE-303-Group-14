@@ -76,7 +76,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../admin.php">
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Home</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>

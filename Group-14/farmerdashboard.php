@@ -10,17 +10,14 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <title>Farmer Dasboard</title> -->
     <title> <?php echo $user_name ?> </title>
 
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
-
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" />
   </head>
@@ -87,14 +84,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
+              <a class="nav-link" href="#">
+                <span class="menu-title">Home</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="inputs/crop entry/index.html">
+              <a class="nav-link" href="inputs/crop_input.php">
                 <span class="menu-title">Crop Entry</span>
               </a>
             </li>
@@ -199,16 +196,13 @@
     </div>
 
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-
     <script src="assets/vendors/chart.js/chart.umd.js"></script>
     <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-
     <script src="assets/js/off-canvas.js"></script>
     <script src="assets/js/misc.js"></script>
     <script src="assets/js/settings.js"></script>
     <script src="assets/js/todolist.js"></script>
     <script src="assets/js/jquery.cookie.js"></script>
-
     <script src="assets/js/dashboard.js"></script>
 
   </body>
