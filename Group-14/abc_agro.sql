@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2024 at 06:58 PM
+-- Generation Time: Dec 20, 2024 at 06:56 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,8 +55,7 @@ CREATE TABLE `delivery_progress_t` (
 
 INSERT INTO `delivery_progress_t` (`PackagingID`, `LotID`, `LotName`, `Source`, `Destination`, `PackagingUnit`, `DeliveryStatus`) VALUES
 ('P001', 'L0001', 'Himshagor1', 'Chapai Nawabgonj', 'Shwapno, Bashundhara R/A, Dhaka', 'Talaimari, Rajshahi', 'Being shipped.'),
-('P002', 'L0002', 'Fazli1', 'Rohonpur, Rajshahi', 'Agora, Mirpur-12, Dhaka', 'Bonpara, Natore', 'Packaging On Progress'),
-('P003', 'L003', 'Rice1', 'Dinajpur', 'Apon Mart, Mohammadpur, Dhaka', 'Shatmatha, Bogra', 'Delivered');
+('P002', 'L0002', 'Fazli1', 'Rohonpur, Rajshahi', 'Agora, Mirpur-12, Dhaka', 'Bonpara, Natore', 'Packaging On Progress');
 
 -- --------------------------------------------------------
 
@@ -98,7 +97,8 @@ CREATE TABLE `driver_t` (
 INSERT INTO `driver_t` (`DriverID`, `FName`, `LName`, `AreaName`, `District`, `Division`, `ContactNumber`, `VehicleID`, `DeliveryID`) VALUES
 ('1234567', 'Nahian', 'Noureen', 'Bashundhara R/A', 'Dhaka', NULL, '1234567890', 'DHK Metro-BA 14-7776', NULL),
 ('D12345', 'Nishat', 'Noureen', 'Mirpur 14', 'Dhaka', 'Dhaka', '0123456789', NULL, NULL),
-('D12348', 'Habibullah', 'Sirat', 'Bashundhara R/A', 'Dhaka', 'Dhaka', '0117894662', NULL, NULL);
+('D12348', 'Habibullah', 'Sirat', 'Bashundhara R/A', 'Dhaka', 'Dhaka', '0117894662', NULL, NULL),
+('D7890', 'Nishat', 'Noureen', 'Pabna Sadar', 'Pabna', 'Rajshahi', '123456789', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -188,6 +188,7 @@ CREATE TABLE `government_staff_t` (
 --
 
 INSERT INTO `government_staff_t` (`EmployeeID`, `EmployeeName`, `WorkingLocation`, `EmployeeType`) VALUES
+('199719981278', 'Sadia', '', 'Nutritionist'),
 ('19997625513000008', 'Sadia', '', 'Nutritionist'),
 ('19997625513000009', 'Sadia', '', 'Grading Unit Manager');
 
@@ -454,6 +455,7 @@ CREATE TABLE `produce_t` (
 --
 
 INSERT INTO `produce_t` (`ProductID`, `Name`, `SpecialName`, `ProduceType`, `EntryDate`, `FarmerID`) VALUES
+('F41941', 'mango', 'himsagor', 'Fruits', '2024-12-20 00:00:00', '1122334'),
 ('F50640', 'Mango', 'Himshagor', 'Fruits', '2024-12-10 00:00:00', '1122334');
 
 -- --------------------------------------------------------
@@ -565,6 +567,7 @@ CREATE TABLE `user_login_t` (
 INSERT INTO `user_login_t` (`userid`, `user_name`, `password`, `user_type`) VALUES
 ('1122334', 'Nahian Noureen', '12345', 'Farmer'),
 ('1234567', 'Nahian Noureen', '12345', 'Driver'),
+('199719981278', 'Sadia', '12345', 'Nutritionist'),
 ('19997625513000008', 'Sadia', '12345', 'Nutritionist'),
 ('19997625513000009', 'Sadia', '12345', 'Grading Unit Manager'),
 ('2320608', 'Nahian Noureen', '12345', 'Admin'),
@@ -572,6 +575,7 @@ INSERT INTO `user_login_t` (`userid`, `user_name`, `password`, `user_type`) VALU
 ('3344556', 'Nahian Noureen', '12345', 'Supplier'),
 ('D12345', 'Nishat Noureen', '12345', 'Driver'),
 ('D12348', 'Habibullah Sirat', '12345', 'Driver'),
+('D7890', 'Nishat Noureen', '12345', 'Driver'),
 ('F12346', 'Habibullah Sirat', '12345', 'Farmer'),
 ('F12347', 'Nishat Noureen', '12345', 'Farmer'),
 ('F12348', 'Nishat Noureen', '12345', 'Farmer'),
@@ -646,7 +650,8 @@ CREATE TABLE `warehouse_t` (
 --
 
 INSERT INTO `warehouse_t` (`WarehouseID`, `AreaName`, `District`, `Division`, `WHManagerID`) VALUES
-('3200', 'Natore Sadar', 'Natore', 'Rajshahi', '2580');
+('3200', 'Natore Sadar', 'Natore', 'Rajshahi', '2580'),
+('WH5678', 'Mirpur 14', 'Dhaka', 'Dhaka', '2580');
 
 --
 -- Indexes for dumped tables
